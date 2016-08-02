@@ -1,8 +1,14 @@
 // Create variables and assign their values
 var inStock;
 var shipping;
-inStock = true;
-shipping = false;
+
+// The boolean value of true or false can be used in the place of so_true and so_false
+// and it will yield the same results.
+
+inStock = "true";
+shipping = "false";
+
+
 
 // Get the element that has an id of stock
 var elStock = document.getElementById('stock');
