@@ -95,15 +95,15 @@ a {
     font-weight: bold;
     line-height: 1.5em;
     height: 2em;
-    display: block;
+    display: inline-block;
     clear: left;
-    min-width: 10em;}
+    min-width: 5em;}
 
 .message span { 
     font-weight: normal;}
 
 .number {
-    text-align: left;}
+    text-align: right;}
 
 table {
     margin: 20px 100px 0 100px;}
