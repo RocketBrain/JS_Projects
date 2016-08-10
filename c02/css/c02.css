@@ -93,8 +93,9 @@ a {
 
 .message {
     font-weight: bold;
+    font-size: 30px;
     line-height: 1.5em;
-    height: 2em;
+    height: 4em;
     display: inline-block;
     clear: left;
     min-width: 5em;}
@@ -106,7 +107,7 @@ a {
     text-align: right;}
 
 table {
-    margin: 20px 100px 0 100px;}
+    margin: 50px 100px 0 100px;}
 
 tr td:first-child {
     font-weight: bold;
