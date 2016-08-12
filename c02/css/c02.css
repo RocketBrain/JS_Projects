@@ -111,7 +111,10 @@ table {
 
 tr td:first-child {
     font-weight: bold;
-    padding-right: 20px;}
+    padding-right: 20px;
+    font-style: italic;
+    font-family: Comic Sans MS;
+}
 
 body:before, body:after {
     content: "";
@@ -130,3 +133,12 @@ body:after {
 body {
     border-left: 20px solid #fff;
     border-right: 20px solid #fff;}
+
+#subTotal {
+    font-weight: bold;
+
+
+
+
+
+}     
