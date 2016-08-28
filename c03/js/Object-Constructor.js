@@ -12,4 +12,5 @@ var elName = document.getElementById('hotelName');
 elName.textContent = hotel.name;
 
 var elRooms = document.getElementById('rooms');
-elRooms.textContent = hotel.checkAvailability();
+elRooms.textContent = hotel.rooms;
+
