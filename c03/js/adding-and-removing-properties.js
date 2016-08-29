@@ -1,25 +1,27 @@
-// Set up the object
-var hotel = {
-  name : 'Park',
-  rooms : 120,
-  booked : 77
-};
+// Creation of object
 
-hotel.gym = true;
+var hotel {
+name: 'Park';
+rooms: 120;
+booked: 77;
+
+}
+
+
+//Assigning booleans to object properties
+hotel.gym =  true;
 hotel.pool = false;
 delete hotel.booked;
 
-// Update the HTML
-var elName = document.getElementById('hotelName'); // Get element
-elName.textContent = hotel.name;                   // Update HTML with property of the object
 
-var elPool = document.getElementById('pool');      // Get element
-elPool.className = hotel.pool;                     // Update HTML with property of the object
+//Scouring HTML code for hotelName,Pool,and Gym
+var elName = document.getElementById('hotelName');
+elName.textContent = hotel.name;
 
-var elGym = document.getElementById('gym');        // Get element
-elGym.className = hotel.gym;                       // Update HTML with property of the object
+//Assigning boolean value to css property
+var elPool = document.getElementById('Pool');
+elPool.className = hotel.pool;
 
-/* 
-NOTE: textContent does not work in IE8 or earlier
-You can use innerHTML on line 14, but note the security issues on p228-231
-*/
+var elGym = document.getElementById('Gym');
+elGym.className = hotel.gym;
+
