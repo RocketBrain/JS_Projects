@@ -1,11 +1,11 @@
 // Creation of object
 
-var hotel {
-name: 'Park';
-rooms: 120;
-booked: 77;
+var hotel = {
+name: 'Park',
+rooms: 120,
+booked: 77,
 
-}
+};
 
 
 //Assigning booleans to object properties
@@ -19,9 +19,9 @@ var elName = document.getElementById('hotelName');
 elName.textContent = hotel.name;
 
 //Assigning boolean value to css property
-var elPool = document.getElementById('Pool');
+var elPool = document.getElementById('pool');
 elPool.className = hotel.pool;
 
-var elGym = document.getElementById('Gym');
+var elGym = document.getElementById('gym');
 elGym.className = hotel.gym;
 
