@@ -22,6 +22,8 @@ var pieces = {
 //Total # of squares. Number is greater than 64 to make moving on the board much easier.
 var BRD_SQ_NUM = 120;
 
+
+// Files are the squares that move vertically. Each file has a position which will eventually be relayed back to an array. 
 var FILES =  { 
 	FILE_A:0, 
 	FILE_B:1, 
@@ -34,6 +36,7 @@ var FILES =  {
 	FILE_NONE:8 
 };
 	
+//Ranks are the horizontal number of squares. There are 8 ranks going across, followed by 8 vertical files.	8x8 = total of 64 squares.
 var RANKS =  { 
 	RANK_1:0, 
 	RANK_2:1, 
@@ -53,6 +56,7 @@ var COLOURS = {
 };
 
 
+// 21 is equal to a rank and file of 0. If anything is on 100, that means it is off the board.
 var SQUARES = {
   A1:21, 
   B1:22, 
@@ -81,13 +85,11 @@ var BOOL = {
 
 
 
-//Imagine a board that has eight of the following going across: 00000000,11111111,22222222,33333333,44444444,55555555,66666666,77777777
-
-//Now, anything outside of that, is off the board.
-
-//We have to account for the knight going off the board by two pieces either above or below the 64 squares, which is why we increase the board to 120.
-
-//It is easier to visualize the number 100 as being "off the board" hence why we repeat it throughout the entire "off" portion of the board. Of course, each number represents a different position.
+/*Imagine a board that has eight of the following going across: 00000000,11111111,22222222,33333333,44444444,55555555,66666666,77777777
+Now, anything outside of that, is off the board.
+We have to account for the knight going off the board by two pieces either above or below the 64 squares, which is why we increase the board to 120.
+It is easier to visualize the number 100 as being "off the board" because we have increased the square numbers to be 21-98. Anything on 100 is "off."
+*/
 
 
 var filesBoard = new Array(BRD_SQ_NUM);
