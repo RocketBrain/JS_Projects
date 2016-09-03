@@ -1,5 +1,5 @@
 
-//Using Pieces as an object, rather than calling each piece directly. Example: if x == Pieces.wN
+//Using pieces as an object, rather than calling each piece directly. Example: if x == pieces.wN
 
 var pieces = { 
 
@@ -79,8 +79,22 @@ var BOOL = {
 	TRUE:1 
 };
 
-var FilesBrd = new Array(BRD_SQ_NUM);
-var RanksBrd = new Array(BRD_SQ_NUM);
+
+
+//Imagine a board that has eight of the following going across: 00000000,11111111,22222222,33333333,44444444,55555555,66666666,77777777
+
+//Now, anything outside of that, is off the board.
+
+//We have to account for the knight going off the board by two pieces either above or below the 64 squares, which is why we increase the board to 120.
+
+//It is easier to visualize the number 100 as being "off the board" hence why we repeat it throughout the entire "off" portion of the board. Of course, each number represents a different position.
+
+
+var filesBoard = new Array(BRD_SQ_NUM);
+var ranksBoard = new Array(BRD_SQ_NUM);
+
+// By using the positionFinder function, we can add the appropriate array to our theoretical model of repeating numbers. 
+//What is at the first file and rank of 0, is really 21. 
 
 
 function positionFinder(file,rank) {
