@@ -9,3 +9,5 @@ var height = this.innerHeight;
 return [height,width];
 
 }
+
+//All global variables become a part of the window object.
