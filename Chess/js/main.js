@@ -11,7 +11,7 @@ function init() {
 }
 
 
-// This function "initializes" each of our definitions so that they are start at 0 and are able to loop accordingly.
+// This function "initializes" each of our definitions so they start at 0 and are able to loop accordingly.
 function initFilesRanksBrd() {
 
 	var index = 0;
