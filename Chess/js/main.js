@@ -23,14 +23,15 @@ function initFilesRanksBrd() {
 
 // Creating loops which go through entire board and puts them into each array
 
-//This one is clearing the entire board and putting it into "offboard."
 
+	// index goes through all 120 squares, and sets both filesBoard and ranksBoard to 100.
 	for (index = 0; index < BRD_SQ_NUM; ++index) {
 	filesBoard[index] = SQUARES.OFFBOARD;
 	ranksBoard[index] = SQUARES.OFFBOARD;
 	}
 
-	//This loop initializes each rank and file to 0, each rank and file is then mathematically converted from the positionFinder function into the filesBoard and ranksBoard array.
+	/* Each rank and file is mathematically converted 
+	from the positionFinder function into the filesBoard and ranksBoard array.*/
 
 	for (rank = RANKS.RANK_1; rank <= RANKS.RANK_8; ++rank) {
 
@@ -48,6 +49,8 @@ function initFilesRanksBrd() {
 	console.log("filesBoard[0]: " + filesBoard[0] + " ranksBoard[0]: " + ranksBoard[0]);
 
 	console.log("filesBoard[SQUARES.A1]: " + filesBoard[SQUARES.E8] + " ranksBoard[SQUARES.E8]: " + ranksBoard[SQUARES.E8]);
+
+	 positionFinder(); 
 }
 
 
