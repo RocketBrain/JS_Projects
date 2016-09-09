@@ -36,7 +36,7 @@ ai = {
 	y: null,
 	width: 20,
 	height: 100,
-	
+
 	update: function() {},
 	draw: function() {
 
@@ -113,10 +113,15 @@ ai.update();
 }
 
 function draw() {
-
+ctx.fillRect(0,0,WIDTH,HEIGHT);
+ctx.save();
+ctx.fillStyle = "#fff";
 ball.draw();
 player.draw();
-ai.draw();	
+ai.draw();
+
+
+ctx.restore();	
 }
 
 main();
