@@ -21,3 +21,13 @@ function windowSize() {
 	//the variable width still remains local, however.
 
 }
+
+var shape = {
+	
+	
+	width: 600,
+	height: 400,
+	getArea: function() {
+		return this.width * this.height; // this is the same as referring to shape.width and shape.height
+	}
+}
