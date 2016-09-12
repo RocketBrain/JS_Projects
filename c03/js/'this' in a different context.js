@@ -31,3 +31,22 @@ var shape = {
 		return this.width * this.height; // this is the same as referring to shape.width and shape.height
 	}
 }
+
+
+var width = 600;
+var shape = {width:300};
+
+
+// Because the showWidth function is defined in global scope, 'this' will have global scope.
+// this can also have local scope if you place it within the 'shape' object.  
+
+
+var showWidth = function() {
+	document.write(this.width,); // If you call the function now, it will be global "showWidth();"
+	
+}
+
+
+shape.getWidth = showWidth; // now 'this' is referring to 'width' inside of shape object.
+
+shape.getWidth(); //calling function now shows us "300" from the width of the shape object.
