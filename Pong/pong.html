@@ -66,6 +66,10 @@ ball = {
 
 		this.x += this.vel.x;
 		this.y += this.vel.y;
+
+		if (0 > this.y || this.y+this.side > HEIGHT){
+			this.vel.y *= -1;
+		}
 	},
 	draw: function() {
 
