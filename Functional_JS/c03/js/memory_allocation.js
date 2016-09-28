@@ -33,11 +33,23 @@ then you have to add double back slash lines which will escape the new line or t
 
 //Unary Operators
 
-/* Unary Operators produce a string naming the type of value.*/
+/* Unary Operators use only one value as its operator. The delete and typeof are
+examples of a Unrary Operator. It is to be noted that the - operator can also be used
+as both single and double values*/
 
 console.log(typeof "x");
 console.log(typeof 7);
 console.log(typeof true);
 
 
+//Comparisons
 
+/*An interesting note on comparisons that is not typically not noted: 
+Letters are considered lesser or greater depending on their alphabetical order.*/
+
+console.log ("apple" < "orange");
+//result: True
+
+//Uppercase letters are also always "less" than lowercase.
+
+//Unicode in JS represents every single letter as a number. 
