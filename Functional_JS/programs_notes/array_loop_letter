@@ -1,0 +1,43 @@
+
+// Denotes the sequence.
+
+c = 000300011020;
+
+n = 29499599706647875;
+
+m = 686878879978797;
+
+x = 776847756786787;
+
+y = 87867766567576;
+
+z = 99878766766556;
+
+u = 99788799689987;
+
+//Sequence is put into array.
+sequenceLetter = [n, c, m, x, u, z, y];
+
+
+
+// Function which calls up the sequence.
+
+function letterBox(array,letter) {
+	
+	for(var i = 0; i<array.length; i++)
+         
+
+	if (array[i] && letter == m){
+		alert(m);
+		return i;
+	}
+	
+	else if (array[i] && letter == u ){
+		alert(u);
+		return i;
+	}
+
+//and so on...
+}
+
+letterBox(sequenceLetter,u);

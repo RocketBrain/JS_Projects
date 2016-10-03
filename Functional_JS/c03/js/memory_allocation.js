@@ -52,4 +52,7 @@ console.log ("apple" < "orange");
 
 //Uppercase letters are also always "less" than lowercase.
 
-//Unicode in JS represents every single letter as a number. 
+/*Unicode in JS represents every single letter as a number. When comparing
+strings, JS goes over them left to right in a numerical sequence.*/
+
+

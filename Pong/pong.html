@@ -21,8 +21,8 @@ player = {
 
 	update: function() {
 
-		if (keystate[UpArrow]) this.y -= 7;
-		if (keystate[DownArrow]) this.y += 7;
+		if (keystate[UpArrow]) this.y -= 9;
+		if (keystate[DownArrow]) this.y += 9;
 	},
 	draw: function() {
 
@@ -59,7 +59,7 @@ ball = {
 	y: null,
 	vel: null,
 	side: 20,
-	speed: 5,
+	speed: 10,
 
 
 	update: function() {
