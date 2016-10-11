@@ -44,7 +44,7 @@ function initFilesRanksBrd() {
 	}
 
 
-	// Doing a console.log at this poing to make sure everything is printing and functions are working.
+	// Doing a console.log at this point to make sure everything is printing and functions are working.
 
 	console.log("filesBoard[0]: " + filesBoard[0] + " ranksBoard[0]: " + ranksBoard[0]);
 
