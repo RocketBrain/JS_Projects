@@ -55,7 +55,7 @@ ai = {
 
 	update: function() {
 		var desty = ball.y - (this.height - ball.side)*0.5;
-		this.y += (desty - this.y);
+		this.y += (desty - this.y) * 0.1;
 
 
 	},
@@ -75,7 +75,7 @@ ball = {
 	y: null,
 	vel: null,
 	side: 20,
-	speed: 10,
+	speed: 12,
 
 
 	update: function() {
