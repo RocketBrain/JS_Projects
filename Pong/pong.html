@@ -34,6 +34,7 @@ player = {
 
 		if (keystate[UpArrow]) this.y -= 9;
 		if (keystate[DownArrow]) this.y += 9;
+		this.y = Math.max(Math.min(this.y, HEIGHT - this.height), 0);
 	},
 	draw: function() {
 
@@ -56,6 +57,7 @@ ai = {
 	update: function() {
 		var desty = ball.y - (this.height - ball.side)*0.5;
 		this.y += (desty - this.y) * 0.1;
+		this.y = Math.max(Math.min(this.y, HEIGHT - this.height), 0);
 
 
 	},
@@ -80,7 +82,7 @@ ball = {
 	serve: function(side){
 
 		var r = Math.random();
-		this.x = side ===1 ? player.x : ai.x - this.side;
+		this.x = side ===1 ? player.x+player.width : ai.x - this.side;
 		this.y = (HEIGHT - this.side)*r;
 
 		var phi = 0.1*pi*(1 -2*r);
