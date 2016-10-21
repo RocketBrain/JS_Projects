@@ -32,8 +32,8 @@ player = {
 
 	update: function() {
 
-		if (keystate[UpArrow]) this.y -= 13;
-		if (keystate[DownArrow]) this.y += 13;
+		if (keystate[UpArrow]) this.y -= 14;
+		if (keystate[DownArrow]) this.y += 14;
 		this.y = Math.max(Math.min(this.y, HEIGHT - this.height), 0);
 	},
 	draw: function() {
@@ -77,7 +77,7 @@ ball = {
 	y: null,
 	vel: null,
 	side: 20,
-	speed: 11,
+	speed: 10,
 
 	serve: function(side){
 
