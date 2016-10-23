@@ -31,10 +31,9 @@ function dontPanic(location) {
 
   	list+=location["ranger" + i].name  +", man the " + location.weaponBulbs[location["ranger" + i].station-1][0] + "!\n";
 
-    /*it is fascinating to think that the following line: [location["ranger" + i].station-1] is really only accesing a number. So in essence,
-    we can have layers of abstraction upon abstraction which in reality is only accesing one single number. The entire bit of code 
-    'location.weaponBulbs[location["ranger" + i].station-1]' is really either a number between 1-3 and goes into the first bracket of the
-    multi-dimensional array.*/
+    /*It is fascinating to think that the following line: [location["ranger" + i].station-1] is really only accesing a number; using several layers
+    of abstraction to get the final number. The entire bit of code 'location.weaponBulbs[location["ranger" + i].station-1]' is really either a number 
+    between 1-3 and goes into the first bracket of the multi-dimensional array.*/
    
   }
     
