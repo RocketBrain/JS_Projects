@@ -3,7 +3,7 @@
 var superBlinders = [ ["Firestorm", 4000], ["Solar Death Ray", 6000], ["Supernova", 12000] ];
 
 
-//lighthouseRock is the 'location' of the dontPanic funtion
+//lighthouseRock is the 'location' of the dontPanic function
 var lighthouseRock = {
   gateClosed: true,
   weaponBulbs: superBlinders,
@@ -31,7 +31,7 @@ function dontPanic(location) {
 
   	list+=location["ranger" + i].name  +", man the " + location.weaponBulbs[location["ranger" + i].station-1][0] + "!\n";
 
-    /*It is fascinating to think that the following line: [location["ranger" + i].station-1] is really only accesing a number; using several layers
+    /*It is fascinating to think that the following line: [location["ranger" + i].station-1] is really only accessing a number; using several layers
     of abstraction to get the final number. The entire bit of code 'location.weaponBulbs[location["ranger" + i].station-1]' is really either a number 
     between 1-3 and goes into the first bracket of the multi-dimensional array.*/
    
