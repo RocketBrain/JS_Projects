@@ -1,0 +1,15 @@
+function converter() {
+  var km = document.getElementById('kilometers'),
+    ml = document.getElementById('miles');
+
+  if (km.value != '') {
+    ml.value = Math.abs(km.value * 0.621371);
+    km.value = '';
+  } else {
+    km.value = Math.abs(ml.value * 1.60934);
+    ml.value = '';
+
+
+
+  }
+}
