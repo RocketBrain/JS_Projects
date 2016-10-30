@@ -16,7 +16,7 @@ function Fibonacci(){
         return f;
 
     };
-}
+
 
 this.recursive = function(n){
 
@@ -26,4 +26,5 @@ this.recursive = function(n){
     else {
         return this.recursive(n-1) + this.recursive(n-2);
     }
-};
+  }
+}
