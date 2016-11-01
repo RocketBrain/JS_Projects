@@ -1,0 +1,19 @@
+
+var findI = "Find all of the letters that contain I";
+
+String.prototype.countLetter = function (letter){
+
+
+	var letterCount = 0;
+
+	for (var i = 0; i<this.length; i++) {
+		if(this.charAt(i).toUpperCase() == letter.toUpperCase() ) {
+			letterCount++;
+
+		}
+	}
+
+	return letterCount;	
+}
+
+findI.countLetter("I");
