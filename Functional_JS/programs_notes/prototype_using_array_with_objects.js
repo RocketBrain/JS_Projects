@@ -12,7 +12,7 @@ Array.prototype.countMake = function(make){
   //this refers to object that is calling function
   for(var i = 0; i<this.length; i++){
     // i goes through entire list of objects inside of array
-    //Once it findes the name property, it then increments the numMake variable.
+    //Once it finds the name property, it then increments the numMake variable.
     if(  make == this[i].name) {
       
       numMake++;
@@ -24,3 +24,5 @@ Array.prototype.countMake = function(make){
 };
 
 carMakes.countMake("BMW")
+
+//this always refers to the "owner" object that calls the function
