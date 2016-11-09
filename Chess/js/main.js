@@ -24,7 +24,7 @@ function initFilesRanksBrd() {
 // Creating loops which go through entire board and puts them into each array
 
 
-	// index goes through all 120 squares, and sets both filesBoard and ranksBoard to 100.
+	// index goes through filesBoard and ranksBoard and sets the results to SQUARES.OFFBOARD
 	for (index = 0; index < BRD_SQ_NUM; ++index) {
 	filesBoard[index] = SQUARES.OFFBOARD;
 	ranksBoard[index] = SQUARES.OFFBOARD;
