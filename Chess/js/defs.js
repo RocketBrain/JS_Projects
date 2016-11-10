@@ -94,12 +94,12 @@ var BOOL = {
 
 
 
-/*Imagine a board that has eight of the following going across: 00000000,11111111,22222222,33333333,44444444,55555555,66666666,77777777
+/*Imagine a board that has eight of the following numbers going across in an 8x8 grid: 0,1,2,3,4,5,6,7
 for a total of 64 squares.
 
 
 We have to account for the knight going off the board by two pieces either above or below the 64 squares, which is why we increase the board to 120.
-We have increased the movable square numbers to be 21-98. Anything on 100 is "off" which accounts for the knight piece on top and bottom positions. 
+We have increased the movable square numbers to be 21-98. Anything on 100 is "off." 
 */
 
 
