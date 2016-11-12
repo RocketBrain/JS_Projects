@@ -18,6 +18,7 @@ var findVehicle = function (name,list){
     findVehicle("Submarine",vehicles);
 
 
+
 /* Using a for loop, as this avoids some of the bugs that 'for in'  and 'of'
 can introduce, namely the looping of prototypes and other functions which
 may reside in the code.*/    
