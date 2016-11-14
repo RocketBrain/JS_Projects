@@ -1,3 +1,4 @@
+
 //Overriding prototypal methods.
 
 var Population = function (city,country){
