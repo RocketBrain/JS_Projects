@@ -92,15 +92,20 @@ var BOOL = {
 	TRUE:1 
 };
 
+//one row = 8 squares horizonally
+//one column = 8 squares vertically
+
+/*Imagine a chess board and its 8 row x 8 column grid totalling 64 squares:
+ 1)The entire 8 square span of each row corresponds to a Rank between 0 and 7
+ 2)If we start with row 0, then all 8 ranks on that horizonal row will be set to 0
+  a) The same applies for each row thereafter corresponding to its rank number.
 
 
-/*Imagine a board that has eight of the following numbers going across in an 8x8 grid: 0,1,2,3,4,5,6,7
-for a total of 64 squares.
-
-
-We have to account for the knight going off the board by two pieces either above or below the 64 squares, which is why we increase the board to 120.
-We have increased the movable square numbers to be 21-98. Anything on 100 is "off." 
-*/
+3)The knight's ability to go offboard is accounted for by adding two rows below Rank 7, and two rows above Rank 0. 
+  These provide border squares in each corner of the square grid. We only have to add one column on either side of the 64 square 
+  grid because the knight will wrap around the board if he goes offboard on either side. 
+  No borders are needed on the sides, only the top and bottom.
+  */
 
 
 var filesBoard = new Array(BRD_SQ_NUM);
@@ -110,8 +115,7 @@ var ranksBoard = new Array(BRD_SQ_NUM);
 
 
 
-/* The positionFinder function adds the appropriate array to our theoretical model of repeating numbers. 
- What is at the first file and rank of 0, is really 21 due to the total number of pieces being 120*/ 
+/* The positionFinder function adds the appropriate square number to our files and ranks. */ 
 
 
 function positionFinder(file,rank) {
