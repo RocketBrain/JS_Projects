@@ -40,6 +40,22 @@ var FILES =  {
 8x8 = total of 64 squares.
 */
 
+//one row = 8 squares horizonally
+//one column = 8 squares vertically
+
+/*Imagine a chess board and its 8 row x 8 column grid totalling 64 squares:
+ 1)The entire 8 square span of each row corresponds to a Rank between 0 and 7
+ 2)If we start with row 0, then all 8 ranks on that horizonal row will be set to 0
+  a) The same applies for each row thereafter corresponding to its rank number.
+
+
+3)The knight's ability to go offboard is accounted for by adding two rows below Rank 7, and two rows above Rank 0. 
+  These provide border squares in each corner of the square grid. We only have to add one column on either side of the 64 square 
+  grid because the knight will wrap around the board if he goes offboard on either side. 
+  No borders are needed on the sides, only the top and bottom.
+  */
+
+
 var RANKS =  { 
 	RANK_1:0, 
 	RANK_2:1, 
@@ -92,20 +108,6 @@ var BOOL = {
 	TRUE:1 
 };
 
-//one row = 8 squares horizonally
-//one column = 8 squares vertically
-
-/*Imagine a chess board and its 8 row x 8 column grid totalling 64 squares:
- 1)The entire 8 square span of each row corresponds to a Rank between 0 and 7
- 2)If we start with row 0, then all 8 ranks on that horizonal row will be set to 0
-  a) The same applies for each row thereafter corresponding to its rank number.
-
-
-3)The knight's ability to go offboard is accounted for by adding two rows below Rank 7, and two rows above Rank 0. 
-  These provide border squares in each corner of the square grid. We only have to add one column on either side of the 64 square 
-  grid because the knight will wrap around the board if he goes offboard on either side. 
-  No borders are needed on the sides, only the top and bottom.
-  */
 
 
 var filesBoard = new Array(BRD_SQ_NUM);
