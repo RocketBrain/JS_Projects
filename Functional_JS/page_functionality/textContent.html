@@ -25,7 +25,10 @@
       var first = document.getElementById("first");
       addMessage(first,"Page loading");
 
-      //Notes for later: console.log both messageElement and messageElement.textContent and witness the changes inside of the function itself.
+      /*It is precisely as I thought. The messageElement holds the object element 'li' while the object textContent 
+      gets its very own memory as an object of messageElement. The parent holds the 'li' element object,
+      while the child holds the message argument itself.*/
+      
       
 
       </script>
