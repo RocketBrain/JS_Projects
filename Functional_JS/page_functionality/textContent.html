@@ -1,0 +1,31 @@
+
+<head>
+      <title>textContent</title>
+      <meta charset="UTF-8">
+</head>
+
+<style>
+#first { 
+	color: blue;
+	}
+</style>      
+
+<ul id="first"></ul>
+    <script>
+      //function arguments take in id and message which will be attached to id
+      function addMessage(element,message){
+      	// inside of the document object, we create the node li and attach it to var messageElement
+        var messageElement = document.createElement("li");
+        //pass into the element li the message from the function using textContent
+        messageElement.textContent = message;
+        //appends the node li to the argument inside of function
+        element.appendChild(messageElement);
+      }
+
+      var first = document.getElementById("first");
+      addMessage(first,"Page loading");
+
+      //Notes for later: console.log both messageElement and messageElement.textContent and witness the changes inside of the function itself.
+      
+
+      </script>
