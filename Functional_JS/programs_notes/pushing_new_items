@@ -1,0 +1,10 @@
+var cars= {
+  makes: [ 'Toyota',
+          'BMW',
+          'Honda',
+  ],
+  addCar: function(car) {
+    this.makes = cars.makes || [];
+    this.makes.push(car);
+  }
+}
