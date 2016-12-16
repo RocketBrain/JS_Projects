@@ -7,15 +7,17 @@ switch (name) {
 
 	case "BMW":
 	this.mileage = 5000
-	break;
+	
 	
 	case "Toyota": 
 	this.mileage = 20000
-	break;
+	
 	  
 	case "Honda":
 	this.mileage = 50000
-	break;
+
+	default: console.log("Without a break, fall through occurs.") //default gets printed even though BMW case was selected.
+
 }
 
   
