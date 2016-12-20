@@ -19,14 +19,12 @@ var lighthouseRock = {
 
 //function retrieves object, then code uses the properties of the object itself to carry out its nefarious deeds.
 function dontPanic(location) {
-  
-  numRangers = location.numRangers; //beginning caching process
-    
+     
   var list = "Avast, me hearties!\n" +
              "There be Pirates nearby! Stations!\n";
 
-  // loop through the rangers and append to list
-  for(var i = 1; i <= numRangers; i++){
+  // further caching
+  for(var i = 1, numRangers = location.numRangers; i <= numRangers; i++){
 
     /*The second part of this list is interesting. We are accesing the superBlinders array through the location which in this 
     case is 'lighthouseRock.' and inside of lighthouseRock is weaponBulbs which holds superBlinders. We then access the multi-dimensional
