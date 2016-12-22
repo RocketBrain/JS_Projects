@@ -16,8 +16,6 @@ var lighthouseRock = {
 };
 
 
-
-//function retrieves object, then code uses the properties of the object itself to carry out its nefarious deeds.
 function dontPanic(location) {
      
   var list = "Avast, me hearties!\n" +
@@ -26,24 +24,11 @@ function dontPanic(location) {
   // further caching
   for(var i = 1, numRangers = location.numRangers; i <= numRangers; i++){
 
-    /*The second part of this list is interesting. We are accesing the superBlinders array through the location which in this 
-    case is 'lighthouseRock.' and inside of lighthouseRock is weaponBulbs which holds superBlinders. We then access the multi-dimensional
-    array using bracket notation. [location["ranger" + i] is using the for loop to access either ranger1,ranger2, or ranger3. Keep in mind 
-    that this entire time we are using bracket notation INSIDE of another property, namely weaponsBulbs. Once this is accomplished, 
-    it then checks the 'station' property of that ranger, and gives the appropriate number into the array.*/
-    
-    
-
-    list+=location["ranger" + i].name  +", man the " + location.weaponBulbs[location["ranger" + i].station-1][0] + "!\n";
-
-    /*It is fascinating to think that the following line: [location["ranger" + i].station-1] is really only accessing a number; using several layers
-    of abstraction to get the final number. The entire bit of code 'location.weaponBulbs[location["ranger" + i].station-1]' is really either a number 
-    between 1-3 and goes into the first bracket of the multi-dimensional array.*/
-   
+    locStation = location.weaponBulbs[location["ranger" + i].station-1][0];
+    locName = location["ranger" + i].name;
+    list+= locName +", man the " + locStation  + "!\n";
   }
     
-  
-
   alert(list);
 }
 
