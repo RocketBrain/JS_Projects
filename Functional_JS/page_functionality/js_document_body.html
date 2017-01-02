@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Messing with JS document object</title>
+</head>
+<body>
+<h1>Utilizing an array inside of document to set a particular style</h1>
+
+<script type = "text/javascript">
+
+document.body.style.color = "red";
+document.body.style.backgroundColor = "blue";
+
+//Sometimes styles from classes may be containted inside of arrays such as this:
+document.getElementsByClassName("doctitle")[0].style.fontSize = "4.3em"
+//When a style is inside of an array, the same principles of normal js programming apply.
+</script>
+
+
+<!-- Though a form like this is under utilized, ancient, and perhaps even unappealing...
+the very nature of its HTML affability, makes it good to know for a potential future rendezvous--> 
+
+<form action="/docs">
+  <label><input type="radio" name="mood"> Like</label>
+  <label><input type="radio" name="mood"> Dislike</label>
+  <label><input type="checkbox" name="feeling"> More content</label>
+  <label><input type="checkbox" name="feeling"> Less content</label>
+  <label><input type="checkbox" name="feeling"> Undecided</label>
+  <input type="text" placeholder="photo URL" required>
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
