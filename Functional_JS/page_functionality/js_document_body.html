@@ -15,15 +15,17 @@ document.body.style.backgroundColor = "blue";
 //document.getElementsByClassName("doctitle")[0].style.fontSize = "4.3em"
 //When a style is inside of an array, the same principles of normal js programming apply.
 
-var list = document.getElementById("cars");
+var list = document.getElementById("cars"),
 
-var cars = ["BMW","Toyota","Honda"];
+cars = ["BMW","Toyota","Honda"],
 
-var fragment = document.createDocumentFragment();
+fragment = document.createDocumentFragment(),
+	
+element;
 
 for (var i = 0, x = cars.length; i<x; i++){
 
-var	element = document.createElement("li");
+element = document.createElement("li");
 
 element.appendChild(document.createTextNode(cars[i]));
 
@@ -31,7 +33,7 @@ fragment.appendChild(element);
 
 }
 
-list.appendChild(fragment);
+
 
 
 
