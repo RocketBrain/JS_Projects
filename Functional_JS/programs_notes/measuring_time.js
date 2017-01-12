@@ -24,15 +24,15 @@ function Car (name,color){
 
 var cars = ["Toyota","BMW","Honda"];
 
-console.time("Testing performance");
+console.time('Testing performance');
 
 for(var i = 0, x = cars.length; i<x; i++){
 
 	var newCars = new Car (cars[i], 2);
-	cars.push(newCar); 
+	cars.push(newCars); 
 
 
 }
 
-console.timeEnd("Total time measuring performance.");
+console.timeEnd('Testing performance');
 
