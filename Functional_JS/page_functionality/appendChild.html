@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web app lifecycle</title>
+<style>
+#first { color: green;}
+#second { color: red;}
+</style>
+</head>
+<body>
+<ul id="first"></ul>
+<script>
+function addMessage(element, message){
+var messageElement = document.createElement("h1");
+messageElement.textContent = message;
+element.appendChild(messageElement);
+}
+var first = document.getElementById("first");
+addMessage(first, "Page loading");
+</script>
