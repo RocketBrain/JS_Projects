@@ -16,7 +16,6 @@ function takeInValue (pattern, value){
 }
 
 
-var numTruths = takeInValue(pattern,true);
+var numTruths = takeInValue(patterns,true);
 
 numTruths;
-
