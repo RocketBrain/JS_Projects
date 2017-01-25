@@ -16,8 +16,9 @@ catch(error){
     alert(error + "\n" + "the item does not exist as \"list\"! \n" + "Check for relocation in master document.");
   }
   
+  // If variable is a float TypeError will usually be given.
   if (error instanceof TypeError){
-    alert(error + "\n" + "Alas, the Hall's list has no concat method. \n" +"Check for a disastrous overwrite!");
+    alert(error + "\n" + "No concat method found. \n" +"Check for a disastrous overwrite!");
   }
 }
 
