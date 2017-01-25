@@ -12,6 +12,7 @@ try {
 }
 
 catch(error){
+	//List not found.
   if (error instanceof ReferenceError) {
     alert(error + "\n" + "the item does not exist as \"list\"! \n" + "Check for relocation in master document.");
   }
