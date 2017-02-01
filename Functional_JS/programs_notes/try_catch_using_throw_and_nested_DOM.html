@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try, Catch- Inside DOM</title>
+<style>
+#first { color: green;}
+#second { color: red;}
+</style>
+</head>
+<body>
+<ul id="first">Pick this up.</ul>
+
+
+<script>
+
+
+function changeInnerHTMLByIdOrExisting(id,update,existing) {
+  
+  try {
+    
+    var newElement = undefined;
+    //looks to get the update from id, placing it as an update to page.
+    document.getElementById(id).innerHTML = update;
+  }
+  
+  //if we get an error, a nested try is then implemented.
+  catch (error){
+    try{
+       
+       //scours through all elements
+      var elements = document.getElementsByTagName('*');
+      //finds the amount of elements
+      for(var i = 0, x = elements.length; i<x; i++){
+        //if the element is found to be existing, it is now given the update.
+        if(elements[i].innerHTML === existing) {
+          elements[i].innerHTML = update;
+          //records whatever is inside of text node and transfers it to id.
+          id = elements[i].id;
+          break;
+        }
+        //at this point loop has gone through entire iteration, and reached the limit of its length.
+        if(i === x){
+            throw new Error("An existing element" + "was not found.")
+        }
+      }
+      
+
+      //this is a custom error message nested inside of a catch
+    } catch(error2) {
+      alert(error2.message + "\nCreating new text node.");
+      //if no element was found with either existing or id, we make up a new one using the nested catch.
+      newElement = document.creatTextNode(update);
+    }
+  }
+
+  //finally will execute regardless of what happens with try and catch.
+  finally {
+    if(newElement !== undefined){
+      console.log("Returning new text node...")
+      return newElement;
+    }
+
+    //If undefined, we notify ourselves of the update.
+    else {
+      console.log("Modified element\"" + (id || existing) + "\" with inner HTML\"" + update + "."); 
+    }
+  }
+}
+
+function addMessage(element, message){
+var messageElement = document.createElement("h1");
+messageElement.textContent = message;
+element.appendChild(messageElement);
+}
+var first = document.getElementById("first");
+addMessage(first, "Page loading");
+
+changeInnerHTMLByIdOrExisting("first","I've been picked up and am now changing!!!", "Pick This Element Up.");
+</script>
+
+
+
