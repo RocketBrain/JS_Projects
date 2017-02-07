@@ -1,7 +1,10 @@
 //using with
 
 var Troll = {
-	internet: "many",
+
+	internet: {
+	trolls: "many"
+    }
 	howToAvoid: function() {
 		alert("Don't feed!!!!!")
 	}
