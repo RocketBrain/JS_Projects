@@ -2,10 +2,10 @@ colorsNeeded = [
   
   {color: "blue"},
   {background: "black"}
-  ]
+  ];
   
   function colorAssignment(number,color){
-    eval("colorNeeded[" + number + "].color ='" + color + "'"); }
+    eval("colorsNeeded[" + number + "].color ='" + color + "'"); };
 
     //refactoring same code into an array
     
