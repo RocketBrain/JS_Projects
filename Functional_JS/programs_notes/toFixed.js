@@ -2,11 +2,9 @@ var num = 0.1 + 0.2;
 
 console.log(num.toFixed(20))
 
-//starts to break down around the 16th decimalvar num = 0.1 + 0.2;
+//starts to break down around the 16th decimal
 
 console.log(num.toFixed(20))
-
-//starts to break down around the 16th decimal
 
 //a further drawback of toFixed is that it returns a string.
 
