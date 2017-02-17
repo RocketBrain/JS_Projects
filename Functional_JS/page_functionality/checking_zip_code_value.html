@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Testing zip code</title>
+      <meta charset="UTF-8">
+    </head>
+<body>
+
+<style>
+#zip {
+color:red;
+}
+</style>
+
+Zip Code: <input type="text" id="zip" value=""/>
+
+
+
+
+<script>
+function isThisANumber(data){
+    return (typeof data === "number" && !isNaN(data));
+}
+
+isThisANumber(NaN);
+
+function checkValidZip() {
+    var entry = document.getElementById("zip").value;
+    console.log(document.getElementById("zip").value);
+    var userZip = parseInt(entry);
+    try {
+        if(isThisANumber(userZip)) {
+          if(userZip.toFixed(0).length === 5){
+            return true;
+          } else {
+              throw new Error("Nope!")
+              alert("Wrong!")
+              console.log("Wrong!")
+            }
+
+        }else {
+              throw new Error("Nope!")
+        }
+     }
+          catch(e){
+            if(e.message === "Nope!"){
+              alert("Please enter a valid zip code.")
+              return false;
+            }
+          }
+
+      }
+</script>
+</body>
+</html>
