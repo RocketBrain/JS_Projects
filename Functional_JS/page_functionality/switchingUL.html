@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- Switching second -->
 
 <ul>
   <li>Coffee</li>
@@ -37,9 +38,9 @@ liArray = [];
 function myFunction() {
 	//gets the tag ul
     var list = document.getElementsByTagName("ul")[1];
-    //replaces ul #2, li index #0 with index 2 (Milk) of liArray (which contains every single li element)
+    //replaces ul #2, li index #0 with index 1 (Tea) of liArray (which contains every single li element)
     list.getElementsByTagName("li")[0].innerHTML = liArray[1].innerHTML;
-    //after attempting so solely print liArray, I was only getting the object element itself. I had to add innerHTML to get the contents of the html.
+    //after attempting to solely print liArray, I was only getting the object element itself. I had to add innerHTML to get the contents of the html.
 }
 
 //Making sure I got the entire contents of the element
