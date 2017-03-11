@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Changing elements with JS code</title>
+<style>
+#first { color: green;}
+#second { color: red;}
+</style>
+</head>
+<body>
+
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+  
+<br>
+<br>
+
+<ul>
+  <li>Milk</li>
+  <li>Sugar</li>
+</ul>
+
+<br>
+
+<p>Click the button to change the text of the second ul, first item.</p>
+
+<button onclick= myFunction();>Switch UL!</button>
+
+
+<script>
+
+liArray = [];
+
+function myFunction() {
+	//gets the tag ul
+    var list = document.getElementsByTagName("ul")[1];
+    //replaces ul #2, li index #0 with index 2 (Milk) of liArray (which contains every single li element)
+    list.getElementsByTagName("li")[0].innerHTML = liArray[1].innerHTML;
+    //after attempting so solely print liArray, I was only getting the object element itself. I had to add innerHTML to get the contents of the html.
+}
+
+//Making sure I got the entire contents of the element
+console.log(document.getElementsByTagName("li").length)
+
+for(i=0;i<document.getElementsByTagName("li").length;i++){
+  liArray.push(document.getElementsByTagName("li")[i]);
+}
+
+</script>
+</body>
+</html>
