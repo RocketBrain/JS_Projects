@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document Fragments</title>
+</head>
+<body>
+<h1>
+Avoiding overwrites within js documents.
+</h1>
+
+<ul id = "numList">
+</ul>
+</body>
+</html>
+
+<script>
+var numList = [1,2,3,4,5];
+var getNumList = document.getElementById("numList");
+fragment = document.createDocumentFragment();
+
+for(var i = 0, x = numList.length; i<x; i++ ){
+element = document.createElement("li");
+//append list to element
+element.appendChild(document.createTextNode(numList[i]));
+//append element to the fragment
+fragment.appendChild(element);
+}
+getNumList.appendChild(fragment);
+
+</script>
