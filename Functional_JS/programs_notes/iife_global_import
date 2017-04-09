@@ -1,0 +1,10 @@
+glob = true;
+
+var iife = function(globalVar) {
+
+  if (globalVar){
+    console.log('You have just imported a global variable into your local scope. Congratulations!');
+    
+  }
+  // using iife to pass global param
+}(glob);
